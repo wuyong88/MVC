@@ -1,0 +1,67 @@
+
+      <!-- Breadcrumb-->
+      <!-- <div class="breadcrumb-holder">
+        <div class="container-fluid">
+          <ul class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item active">Tables       </li>
+          </ul>
+        </div>
+      </div> -->
+      <section>
+        <div class="container-fluid">
+          <!-- Page Header-->
+          <header> 
+            <!-- <h1 class="h3 display">Tables            </h1> -->
+          </header>
+          <div class="row">            
+              <div class="card" style="width: 100%">
+                <div class="card-header">
+                  <h4 style="font-size: 16px">新闻分类列表</h4>
+                </div>
+                <div class="card-body">
+                  <div class="table-responsive" style="    border-bottom: 1px solid #eee;">
+                    <table class="table table-striped table-sm" style="font-size: 14px">
+                      <thead>
+                        <tr>
+                          <th>#</th>
+                          <th>分类</th>
+                          <th>f_id</th>
+                          <th>操作</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                     
+                     <!-- $v只要v省略k -->
+                 <?php  foreach ($news_cates as $v){   ?>
+                        <tr>
+                          <th><?= $v['id']?></th>
+                          <th><?= $v['name']?></th>
+                          <td><?= $v['pid']?></td>
+                          <td>
+                           <a class="btn btn-primary" style="clolr:#ffffff" href="index.php?m=1&c=news_cates&a=save&id=<?=$v['id']?>">修改</a>
+                            <button type="button" class="btn btn-danger" data-id="<?= $v['id']?>">删除</button>
+                          </td>
+                        </tr>
+                      <?php } ?>`
+
+                      </tbody>
+                    </table>
+
+                  </div>
+                  <ul class="pagination" style="float: right;">
+                      <!-- <li><a href="#">&laquo;</a></li>
+                      <li class="active"><a href="#">1</a></li>
+                      <li class="disabled"><a href="#">2</a></li>
+                      <li><a href="#">3</a></li>
+                      <li><a href="#">4</a></li>
+                      <li><a href="#">5</a></li>
+                      <li><a href="#">&raquo;</a></li> -->
+                      <?= $page_str?>
+                    </ul>
+                </div>
+              </div>
+          </div>
+        </div>
+      </section>
+     

@@ -1,0 +1,62 @@
+
+		<link rel="stylesheet" type="text/css" href="resources/home/css/product.css"/>
+		
+		<!--主体部分-->
+	    <div class="biggest">
+	    	<div class="product">
+	    		<div class="container">
+	    			<div class="dh">
+	    				<span>当前位置：</span>
+	    				<ul>
+	    					<li><a href="index.php?c=index&a=index">首页</a> &gt;</li>
+	    					<li><a href="index.php?c=pro&a=index">产品中心</a> &gt;</li>
+	    					<li><a href="index.php?c=pro&a=index" class="dh">全部产品</a> </li>
+	    				</ul>
+	    	        	         
+	    	        </div>
+	    			<div class="left">
+	    			    <h2>
+	    			    	<font>产品中心</font><br />
+	    			    	<span>PRODUCT CENTER</span>
+	    			    </h2>
+	    			    <ul>
+	    			    <?php foreach($product_cates as $v){?>
+	    			    	 
+	    			    	<li <?php if($cate_id==$v['id']){?>class="li1" <?php }?>>
+	    			    		<a href="index.php?c=pro&a=index&cate_id=<?=$v['id']?>"" ><?=$v['name']?></a>
+	    			    	</li>
+	    			    	<?php }?>
+	    			    </ul>
+	    		    </div>
+	    	        <div class="right">
+	    	        	<h3>产品类型</h3>
+	    		        <div class="img">
+	    		        	<ul>
+	    		   <?php foreach($product as $v){?>
+	    		        		<li>
+				                    <a href="index.php?c=pro&a=detail"><img src="<?=$v['img']?>"/></a> 
+				                    <p><a href="index.php?c=pro&a=detail"><?=$v['title']?></a></p>
+			                    </li>
+			        <?php }?>
+			                    
+	    		        	</ul>
+	    	            </div>
+	    	            <div class="page">
+	    	                <ul>
+			    	    	<?= $page_str?>
+			    	        </ul>
+	    	            </div>
+	    	        </div>
+	    		</div>
+	        </div>
+	    </div>
+		<!--这是尾部-->
+		<div class="foot">
+			<p>Copyright&copy;2008-2017 常州乐农生物科技有限公司版权所有</p>
+		</div>
+		
+	</body>
+</html>
+<!--pagination分页-->
+<!--arrow箭头-->
+<!--container容量-->

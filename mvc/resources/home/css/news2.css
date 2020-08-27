@@ -1,0 +1,123 @@
+.news2{
+	width: 1200px;
+	margin:0 auto;
+}
+.news2 .title{
+	border-bottom: 1px dashed #D6D6D6;
+	width: 1200px;
+	text-align: right;
+	height: 0;
+	padding-bottom: 24px;
+	margin-top: 58px;	
+}
+.news2 .title ul{
+	float: right;
+}
+.news2 .title li{
+	float: left;
+	color: #D6D6D6;
+}
+.news2 .title span{
+	position: relative;
+}
+.news2 .title a,.news2 .title span{
+	color: #D6D6D6;
+}
+.news2 .title .li1{
+	color: #99CC33
+}
+.news2 .title span:before{
+	display: block;
+	content: '';
+	background: url(../img/hoom.png) no-repeat;
+	position: absolute;
+	width: 22px;
+	height: 18px;
+	left: -24px;
+	top:2px
+}
+.news2 .left{
+	float: left;
+	border: 3px solid #D6D6D6;
+	width: 252px;
+	height: 302px;
+	text-align: center;
+	margin-top: 120px;
+	position: relative;
+}
+.news2 .left h2{
+	margin: 24px 0;
+	color: #d6d6d6;
+	font-size: 14px;
+}
+.news2 .left h2 font{
+	font-size: 24px;
+	color: #000000;
+}
+.news2 .left h2 span:before{
+	content: '';
+	display: block;
+	position: absolute;
+	height: 3px;
+	width: 32px;
+	background-color: #d6d6d6;
+	left: 44px;
+	top: 40px;
+}
+.news2 .left h2 span:after{
+	content: '';
+	display: block;
+	position: absolute;
+	height: 3px;
+	width: 32px;
+	background-color: #d6d6d6;
+	right: 44px;
+	top: 40px;
+}
+.news2 .left a{
+	display: block;
+	font-size: 18px;
+	line-height: 44px;
+	margin-bottom: 20px;
+}
+.news2 .left .lione{
+	background-color: #99cc33;
+}
+.news2 .left a:hover{
+	background-color: #99cc33;
+}
+.news2 .right{
+	float: left;
+	width: 808px;
+	margin-left: 72px;
+}
+.news2 .right h3{
+	text-align: center;
+	font-size: 18px;
+	margin: 62px 0 42px;
+}
+.news2 .right img{
+	margin-left: 90px;
+	margin-bottom: 38px;
+}
+.news2 .right p{
+	font-size: 14px;
+	line-height: 24px;
+	text-align:justify;
+	text-indent: 2em;
+	margin: 0 0 38px 0;
+}
+.news2 .right .page a{
+	display: block;
+	line-height: 22px;
+	margin-bottom: 12px;
+}
+.news2 .right .page .next{
+	margin-bottom: 56px;
+}
+.news2 .right .page{
+	margin-top: 6px;
+}
+.news2 .right .page a:hover{
+	text-decoration: underline;
+}

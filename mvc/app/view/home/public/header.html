@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>首页</title>
+		<link rel="stylesheet" type="text/css" href="resources/home/css/resret.css"/>
+		<link rel="stylesheet" type="text/css" href="resources/home/css/public.css"/>
+		<link rel="shortcut icon" type="image/x-icon" href="resources/home/img/title.ico"/>
+		<script src="resources/home/js/jquery-1.10.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="resources/home/js/banner.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<!--这是首部-->
+		<div class="head">
+			<div class="img">
+				<img src="resources/home/img/index.png"/ alt="logo">
+		    </div>
+		    <div class="nav">
+			   <ul>
+			   	<?php foreach($menu_data as $v){ ?>
+				 <li>
+				 	<a <?php if($v['controller']==C){?> class="on"<?php }?>  href="index.php?c=<?=$v['controller']?>&a=<?=$v['action']?>">
+				 	<?=$v['name']?>
+				 	</a>
+				 </li>
+			  <?php }?>
+
+         </ul>
+				 
+		   
+		    </div>
+		</div>
+		<!--这是主体-->
+
+		<!--这是banner滚动广告-->
+		<div class="banner">
+			<div class="all_img">
+				<div class="wrapper">
+					<div class="container">
+				        <img src="resources/home/img/banner1.png" alt="banner1"/>
+				    </div>
+			        <div class="container">
+				        <img src="resources/home/img/banner2.png" alt="banner2"/>
+				    </div>
+				    <div class="container">
+				        <img src="resources/home/img/banner3.png" alt="banner2"/>
+				    </div>
+				</div>
+		<!--这是箭头-->
+		        <div class="arrow">
+			     	<a class="arrow-left" href="javascript:void(0)"></a>
+			     	<a class="arrow-right" href="javascript:void(0)"></a>
+			    </div>
+	    <!--这是小圆点-->
+			     <div class="cycle">
+			      	<span class="active">	</span>
+			      	<span>	</span>
+			      	<span>	</span>
+			     </div>
+			</div>
+		</div>

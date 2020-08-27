@@ -1,0 +1,55 @@
+
+		<link rel="stylesheet" type="text/css" href="resources/home/css/news2.css"/>
+
+		<!--主体部分-->
+	    	<div class="news2">
+	    	    <div class="container clearfix">
+	    	    	<div class="title">
+	    	    	       <span>当前位置:</span>
+	    	    	       <ul>
+	    	    	       	<li><a href="index.php?c=index&a=index">首页</a>&gt;</li>
+	    	    	       	<li><a href="index.php?c=news&a=index">新闻中心</a>&gt;</li>
+	    	    	       	<li><a href="index.php?c=news&a=index" class="li1">行业动态</a></li>
+	    	    	       </ul>
+	    	        </div>
+	    		    <div class="left">
+	    		        <ul>
+	    		        	<h2>
+	    		        		<font>新闻中心</font><br/>
+	    			    	    <span>NEWS CENTER</span>
+	    		        	</h2>
+	    		        	<?php   foreach($news_cate as $v){?>
+	    		        	<li <?php if($cate_id==$v['id']){?> 
+	    		        		class="lione"
+	    		        		<?php }?>>
+	    		        		<a href="index.php?c=news&a=detail&cate_id=<?=$v['id']?>"><?=$v['name']?></a>
+	    		        	</li>
+                                      <?php }?>
+	    		        </ul>
+	    	        </div>
+	    	        <div class="right">
+	    	        	 
+	    	        <div class="news1 clearfix"> \<?php   foreach($news_data as $v){?>
+	    	        	<h3><a href="index.php?c=news&a=detail"><?=$v['title']?></a></h3>
+	    	        			<a href="index.php?c=news&a=detail"><img  style="width:620px ;height:404px " src="<?=$v['img']?>"/></a>
+	    	        
+	    	        			<p><?=$v['content']?></p>
+	    	        			<p><?=$v['content']?></p>
+	    	        	<div class="page">
+	    	        		<a href="index.php?c=news&a=detail&cate_id=19">上一篇： 生物农药在西红柿生长中的作用</a>
+	    	        		<a href="index.php?c=news&a=detail&cate_id=17" class="next">下一篇："菌"中王者--生物农药枯草芽孢杆菌为何那么强!</a>
+	    	        	</div> <?php }?>
+	    	        </div>
+	    	       </div>
+	    	    </div>
+	       </div>
+		<!--这是尾部-->
+		<div class="foot">
+			<p>Copyright&copy;2008-2017 常州乐农生物科技有限公司版权所有</p>
+		</div>
+		
+	</body>
+</html>
+<!--pagination分页-->
+<!--arrow箭头-->
+<!--container容量-->

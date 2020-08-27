@@ -1,0 +1,129 @@
+	<div class="biggest">
+		<!--这是关于我们-->
+		<div class="about">
+			<div class="container">
+				<div class="title">
+					<h2>关于我们<big>A</big><span>BOUT US</span></h2>
+				    <hr />
+				</div> 
+			</div>
+			<div class="content">
+				<?php  foreach ($about_data as $k=>$v){  ?> 
+			    	<div class="content-left">
+			    		<div class="left-center">
+			    			
+			    			<p class="left-centertitle">
+			    		<?=$v['title'] ?>
+			    			</p>
+			    			<p class="left-centerbody"><?=$v['content'] ?></p>
+			    		
+			    			<span>
+			    				<a href="index.php?c=about&a=index">查看更多</a>
+			    			</span>
+			    		</div>
+			    	</div>
+			    	<div class="content-right">
+			    		<img style="width: 587px;height: 347px" src="<?=$v['img'] ?>"/>
+			    	</div>
+			    	<?php }?>	
+			</div>
+		</div>
+		<div class="biggest">
+			<div class="container">
+				<div class="title">
+					<h2>产品中心<big class="big">P</big><span>RODUCT</span></h2>
+				    <hr />
+				</div> 
+			</div>
+				<div class="por-list" >
+					<ul class="clearfix"  style="width: 1250px">
+						  <?php  foreach ($product_data as $k=>$v){  ?> 
+				      <li>
+				        <a href="index.php?c=pro&a=index&cate_id=10"><img style="width: 374px; height: 306px;" src="<?=$v['img'] ?>"/></a> 
+				         <p><a href="index.php?c=pro&a=index&cate_id=6"><?=$v['title'] ?></</a></p>
+			          </li>
+			      <?php }?>
+			          
+			        </ul>
+			        <a href="index.php?c=pro&a=index" class="lookmore">查看更多</a>
+				</div>
+			</div>
+	</div>
+	<!--新闻中心-->
+        <div class="biggest">
+    	    <div class="news">
+		      <div class="container">
+		    	    <div class="title">
+		    		    <h2>新闻中心<big class="big">N</big><span>EWS CENTER</span></h2>
+		    		    <hr />
+		    	    </div>
+		    	<div class="left">
+		    		<img src="<?=$news_data[0]['img'] ?>">
+		    		<h3><a href="#" class="a"><?=$news_data[0]['title']?></a></h3>
+		    		<em><?=$news_data[0]['cTime']?></em>
+		    		<p><?=$news_data[0]['content']?></p>
+		    		<a href="index.php?c=news&a=index&cate_id=17"  class="more">更多详情</a>
+		    		<i class="jiantou"></i>
+		    	</div>
+		    	<div class="right">
+		    		    <ul class="morenews">
+                      <?php  foreach ($news_data as $k=>$v){  ?> 
+                       <?php if($k!=0){?>
+                 
+         
+		    			    <li>
+		    			    	<img src="<?=$v['img'] ?>"/>
+		    			    	<h3><?=$v['title'] ?></h3>
+		    			    	<em><?=$v['cTime'] ?></em>
+		    			    	<p><?=$v['content'] ?></p>
+		    			    	<a href="index.php?c=news&a=index&cate_id=18" class="more">更多详情</a>
+		    			    	<i class="jiantou"></i>
+		    			    </li>
+
+		    			   <?php }?>
+		    			   <?php }?>
+		    		    </ul>
+		    	</div>
+		      </div>
+	        </div>
+        </div>
+        <div class="biggest">
+        	      <!--联系我们-->
+		    <div class="contact">
+			    <div class="container">
+			    	<div class="title">
+			    		<h2>联系我们<big class="big">C</big><span>ONTACT US</span></h2>
+			    		<hr />
+			    	</div>
+			    	<div class="littlecontainer">
+			    		 <?php foreach($touch_data as $k=>$v){?>
+			    		<img src="<?=$v['img'] ?>"/>
+			    		<ul >
+                  
+
+			    		    <h3>联系方式</h3>
+			    		   
+			    		    <li>公司名称：<?=$v['gsname'] ?></li>
+			    		    <li>公司地址：<?=$v['gssite'] ?></li>
+			    		    <li>邮政编码：<?=$v['zip'] ?></li>
+			    		    <li>公司电话：<?=$v['tel'] ?></li>
+			    		    <li>联系人：<?=$v['user'] ?></li>
+			    		    <li>手机号码：<?=$v['phone'] ?></li>
+			    		    
+			    		    <?php }?>
+
+			    	   </ul>
+			    	</div>
+			    </div>
+		    </div>
+        </div>
+		<!--这是尾部-->
+		<div class="foot">
+			<p>Copyright&copy;2008-2017 常州乐农生物科技有限公司版权所有</p>
+		</div>
+		
+	</body>
+</html>
+<!--pagination分页-->
+<!--arrow箭头-->
+<!--container容量-->

@@ -1,0 +1,64 @@
+
+      <section>
+        <div class="container-fluid">
+          <!-- Page Header-->
+          <header> 
+            <!-- <h1 class="h3 display">Tables            </h1> -->
+          </header>
+          <div class="row">            
+              <div class="card" style="width: 100%">
+                <div class="card-header">
+                  <h4 style="font-size: 16px">用户列表</h4>
+                </div>
+                <div class="card-body">
+                  <div class="table-responsive" style="    border-bottom: 1px solid #eee;">
+                    <table class="table table-striped table-sm" style="font-size: 14px">
+                      <thead>
+              <tr>
+                          <th>#</th>
+                          <th>公司名称</th>
+                          <th>是否发布</th>
+                          <th>分类</th>
+                          <th>公司内容</th>
+                          <th>图片</th>
+
+                          <th>操作</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+
+                   
+         
+                     <!-- $v只要v省略k -->
+                   <?php  foreach ($data as $v){   ?>
+                        <tr>
+                          <th><?= $v['id']?></th>
+                          <td><?= $v['title']?></td>
+                          <td><?= $v['is_show']?></td>
+                          <td><?= $v['name']?></td>
+                          <td><?= $v['content']?></td>
+                          
+                          <td><img style="width: 50px" src="<?= $v['img']?$v['img']:'resources/admin/img/no_tu.jpeg'?>"></td>
+                        
+                   
+                          <td>
+                            <a href=" index.php?m=1&c=about&a=save&id=<?=$v['id']?>" class="btn btn-primary">修改</a>
+                            <a href="index.php?m=1&c=about&a=del&id=<?=$v['id']?>" class="btn btn-danger" >删除</a>
+                          </td>
+                        </tr>
+                      <?php } ?>
+
+                      </tbody>
+                    </table>
+
+                  </div>
+                  <ul class="pagination" style="float: right;">
+             
+                      <?= $page_str?>
+                    </ul>
+                </div>
+              </div>
+          </div>
+        </div>
+      </section>
+   

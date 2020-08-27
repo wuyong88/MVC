@@ -1,0 +1,161 @@
+.newss .container{
+	width: 1200px;
+	height: 1006px;
+	margin: 0 auto;
+}
+.newss .title{
+	border-bottom:1px dashed #d6d6d6;
+	text-align: right;
+	width: 1200px;
+	margin-top: 56px;
+	height: 0px;
+	padding-bottom: 24px;
+}
+.newss .title ul{
+	float: right;
+} 
+.newss .title li{
+	float: left;
+}
+.newss .title li .li1{
+	color: #99cc33;
+}
+.newss .title li a,.newss .title span{
+	color:#d6d6d6;
+}
+.newss .title span{
+	position: relative;
+}
+.newss .title span:before{
+	content: '';
+	display: inline-block;
+	position: absolute;
+	background: url(../img/hoom.png) no-repeat;
+	width: 22px;
+	height: 18px;
+	left: -24px;
+	top:2px
+}
+.newss .left{
+	border: 3px solid #d6d6d6;
+	float: left;
+	display: inline-block;
+	width: 252px;
+	height: 302px;
+	margin-top: 120px;
+	text-align: center;
+	position: relative;
+}
+.newss .left h2{
+	font-size: 14px;
+	color: #d6d6d6;
+	margin-bottom: 22px;
+}
+.newss .left h2 font{
+	color: #000000;
+	font-size: 24px;
+}
+.newss .left h2 span:before{
+	content: '';
+	display: block;
+	position: absolute;
+	background-color: #d6d6d6;
+	position: absolute;
+	top: 32px;
+	right: 41px;
+	width: 32px;
+	height: 2px;
+}
+.newss .left h2 span:after{
+	content: '';
+	display: block;
+	position: absolute;
+	background-color: #d6d6d6;
+	position: absolute;
+	top: 32px;
+	left: 41px;
+	width: 32px;
+	height: 2px;
+}
+.newss .left ul li{
+	margin-bottom: 16px;
+}
+.newss .left ul a {
+	display: block;
+	font-size: 18px;
+	line-height: 60px;
+}
+.newss .left ul .lione{
+    background-color: #99cc33;
+}
+.newss .left ul a:hover{
+	background-color: #99cc33;
+}
+.newss .right{
+	float:left ;
+	margin-top: 56px;
+	width: 942px;
+}
+.newss .right .title1 h3{
+	margin: 0 0 40px 0;
+	text-align: center;
+	font-size: 18px;
+}
+.newss .right .img{
+	margin: 0 68px;
+}
+.newss .right img{
+	margin-right: 48px;
+	float: left;
+	clear: both;
+}
+.newss .right .news1{
+	width: 812px;
+	height: 198px;
+	margin-bottom: 28px;
+	text-align: justify;
+}
+.newss .right .news1 h3{
+	display: inline-block;
+	font-size: 18px;
+	margin-top: 0;
+	margin-right: 126px;
+}
+.newss .right .news1 em,.newss .right .news1 a{
+	font-size: 12px;
+}
+
+.newss .right .news1:hover h3,.newss .right .news1:hover p{
+	text-decoration: underline;
+}
+.newss .right .news1 .lookmore{
+	float: right;
+}
+.newss .right .page{
+	width: 364px;
+	margin-left: 260px;
+	margin-top: 90px;
+}
+.newss .right .page li{
+	display: inline-block;
+	background-color: #cccccc;
+	margin: 0 9px;
+}
+.newss .right .page a{
+	display: inline-block;
+	width: 36px;
+	text-align: center;
+	line-height: 36px;
+}
+.newss .right .page .on a{
+	width: 56px;
+}
+.newss .right .page .on{
+	margin: 0;
+}
+.newss .right .page a:hover{
+	background-color: #99cc33;
+}
+.newss .right .page .one{
+	background-color: #99cc33;
+}

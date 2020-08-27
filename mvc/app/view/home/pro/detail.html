@@ -1,0 +1,55 @@
+
+		<link rel="stylesheet" type="text/css" href="resources/home/css/product2.css"/>
+		
+		<!--主体部分-->
+        <div class="product2 clearfix">
+        	<div class="title clearfix">
+        		<h3>
+        			<span>当前位置:</span>
+        			<ul>
+        				<li><a href="index.php?c=index&a=index">首页</a>&gt;</li>
+        				<li><a href="index.php?c=pro&a=index">产品中心</a>&gt;</li>
+        				<li><a href="index.php?c=pro&a=index" class="li1">生物农药</a></li>
+        			</ul>
+        		</h3>
+        	</div>
+        	<div class="left clearfix">
+        		<ul>
+	    		    <h2>
+	    		        <font>产品中心</font><br/>
+	    			    <span>PRODUCT CENTER</span>
+	    		    </h2>
+	    		    	<?php foreach($product_cates as $v){?>
+	    			    	 
+	    			    	<li <?php if($cate_id==$v['id']){?>class="lione" <?php }?>>
+	    			    		<a href="index.php?c=pro&a=detail&cate_id=<?=$v['id']?>"" ><?=$v['name']?></a>
+	    			    	</li>
+	    			    	<?php }?>
+	    		</ul>
+        	</div>
+        	<div class="right clearfix">
+        		<?php foreach($product as $v){?>
+	    		        		<li>
+	    		        			<p><a href="index.php?c=pro&a=detail"><?=$v['title']?></a></p>
+				                    <a href="index.php?c=pro&a=detail"><img src="<?=$v['img']?>"/></a>
+				                    <p><a href="index.php?c=pro&a=detail"><?=$v['content']?></a></p> 
+				                    
+			                    </li>
+			        <?php }?>
+	         	
+	         	<div class="page">
+	         		<a href="index.php?c=pro&a=detail&cate_id=10">上一产品：苏芸金杆菌杀虫剂</a><br />
+	         		<a href="index.php?c=pro&a=detail&cate_id=12">下一产品：除草剂</a>
+	         	</div>
+        	</div>
+        </div>
+	    
+		<div class="foot"><!--这是尾部-->
+			<p>Copyright&copy;2008-2017 常州乐农生物科技有限公司版权所有</p>
+		</div>
+		
+	</body>
+</html>
+<!--pagination分页-->
+<!--arrow箭头-->
+<!--container容量-->

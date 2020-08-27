@@ -1,0 +1,122 @@
+.product2{
+	width: 1200px;
+	margin: 0 auto;
+}
+.product2 .title{
+	border-bottom:1px dashed #d6d6d6;
+	text-align: right;
+	width: 1200px;
+	margin-top: 56px;
+	height: 0px;
+	padding-bottom: 24px;
+}
+.product2 .title ul{
+	float: right;
+}
+.product2 .title ul li{
+	float: left;
+}
+.product2 .title h3{
+	color:#d6d6d6;
+}
+.product2 .title h3 a{
+	color:#d6d6d6;
+}
+.product2 .title li .li1{
+	color: #99cc33;
+}
+.product2 .title span{
+	position: relative;
+}
+.product2 .title span:before{
+	content: '';
+	display: inline-block;
+	position: absolute;
+	background: url(../img/hoom.png) no-repeat;
+	width: 22px;
+	height: 18px;
+	left: -24px;
+}
+.product2 .left{
+	border: 3px solid #d6d6d6;
+	float: left;
+	display: inline-block;
+	width: 252px;
+	height: 302px;
+	margin-top: 120px;
+	text-align: center;
+	position: relative;
+}
+.product2 .left h2{
+	font-size: 14px;
+	color: #d6d6d6;
+	margin-bottom: 22px;
+}
+.product2 .left h2 font{
+	color: #000000;
+	font-size: 24px;
+}
+.product2 .left h2 span:before{
+	content: '';
+	display: block;
+	position: absolute;
+	background-color: #d6d6d6;
+	position: absolute;
+	top: 32px;
+	right: 41px;
+	width: 32px;
+	height: 2px;
+}
+.product2 .left h2 span:after{
+	content: '';
+	display: block;
+	position: absolute;
+	background-color: #d6d6d6;
+	position: absolute;
+	top: 32px;
+	left: 41px;
+	width: 32px;
+	height: 2px;
+}
+.product2 .left ul li{
+	margin-bottom: 16px;
+}
+.product2 .left ul a {
+	display: block;
+	font-size: 18px;
+	line-height: 60px;
+}
+.product2 .left ul .lione{
+    background-color: #99cc33;
+}
+.product2 .left ul a:hover{
+	background-color: #99cc33;
+}
+.product2 .right{
+	/*border: 1px solid  black;*/
+	float:left;
+	margin-top: 56px;
+	width: 615px;
+	margin-left: 166px;
+}
+.product2 .right p{
+	line-height:26px ;
+	font-size: 14px;
+	margin: 0;
+}
+.product2 .right h3{
+	margin: 0 0 40px 0;
+	text-align: center;
+	font-size: 18px;
+}
+.product2 .right img{
+	width: 612px;
+	height: 302px;
+}
+.product2 .right .page{
+	margin: 30px 0 54px 0;
+	line-height: 24px;
+}
+.product2 .right .page a:hover{
+	text-decoration: underline;
+}

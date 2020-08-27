@@ -1,0 +1,41 @@
+html,body,div,ul,li,a{padding: 0;margin: 0;}
+h1,h2,h3,h4,h5,h6{font-weight:normal;}
+.clearfix:after{
+	content: " ";
+	display: block;
+	clear: both;
+}
+.jiantou{
+	display: inline-block;
+	border: 3px solid #cccccc;
+	border-color: transparent transparent transparent #cccccc;
+	
+}
+em{
+	font-style: normal;
+}
+li{
+	list-style: none;
+}
+h3{
+	font-size:18px;
+	line-height: 18px;
+}
+p{
+	font-size:14px;
+	line-height: 24px;
+}
+.news .more{
+	font-size: 12px;
+	display: inline-block;
+	color: #cccccc;
+	text-decoration: none;
+}
+.biggest{
+	overflow: hidden;
+}
+a{
+	text-decoration: none;
+	color: black;
+	font-family: "微软雅黑";
+}

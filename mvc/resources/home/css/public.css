@@ -1,0 +1,403 @@
+/*导航和logo*/
+.head{
+	height: 120px;
+	margin: 0 auto;
+	width: 1190px;
+	overflow: hidden;
+}
+.head .img{
+	margin-left: 12px;
+	margin-top: 10px;
+	width:296px;
+	height: 120px;
+	float: left;
+}
+.head .nav li{
+	display:inline-block;
+	list-style:none;
+	margin-left:50px;
+}
+.head .nav ul li a{
+	display: block;
+	text-decoration: none;
+	width: 120px;
+	line-height: 120px;	
+	text-align: center;
+	color: black;
+}
+.head .nav ul li .off:hover{
+	color: #99cc33;
+}
+.head .nav ul .on{
+    color: white;
+    background-color:#99cc33;
+}
+/*尾部*/
+.foot p{
+	text-align: center;
+	background-color:#99cc33;
+	line-height: 82px;
+	margin: 0 auto;
+}
+/*滚动图*/
+/*滚动图*/
+.banner{
+	/*position: relative;*/
+	height: 500px;
+	border-top: solid 1px #dcdcdc;	
+	overflow: hidden;
+}
+.banner .all_img{
+	width: 1920px;
+	height: 500px;
+	position:relative;
+	margin-left: 50%;
+	left: -960px;
+	overflow: hidden;
+}
+.banner  .all_img .wrapper{
+	width: 17280px;
+	position: absolute;
+	left: -5760px;
+}
+.banner  .all_img .container {
+	float: left;
+}
+.banner .all_img .container img{
+	/*position: relative;*/
+}
+/*双箭头*/
+.banner .arrow{
+	position: absolute;
+	width: 1190px;
+	float: left;
+	top: 50%;
+	left: 50%;
+	margin-top: -32px;
+	margin-left: -595px;
+}
+.banner .arrow .arrow-left{
+	float: left;
+	width: 34px;
+	height: 64px;
+	background:url(../img/雪碧图.png) no-repeat left bottom;
+}
+.banner .arrow .arrow-right{
+    float:right;
+    width: 34px;
+	height: 64px;	
+	background:url(../img/雪碧图.png) no-repeat left top;
+}
+/*小圆点*/
+.banner .cycle{
+	position: absolute;
+	width: 100%;
+	bottom: 0;	
+	text-align: center;
+}
+.banner .cycle span{
+	background: url(../img/雪碧图2.png) no-repeat top;
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+}
+.banner .cycle .active{
+	background: url(../img/雪碧图2.png) no-repeat bottom;
+}
+/*关于我们*/
+/*.mina{
+	overflow: hidden;
+}*/
+.about{
+	background: url(../img/about背景.png) no-repeat;
+	position: relative;
+	left: 50%;
+	width: 1920px;
+	margin-left: -960px;
+	overflow: hidden;
+}
+/*标题*/
+.about .container{
+	width: 1200px;
+	margin: 0 auto;
+}
+.title{
+	width: 146px;
+	height: 46px;
+	margin: 0 auto;
+	/*position: relative;*/
+}
+.title h2{
+	width: 174px;
+	position: relative;
+	text-indent: 48px;
+	font-size: 22px;
+	line-height: 22px;
+	margin-bottom: 0;
+	margin-top: 68px;
+}
+.title h2 span{
+	display: block;
+	font-size: 20px;
+	line-height: 20px;
+	margin-top:10px;
+}
+.title h2 big{
+	text-indent: 0;
+	font-size: 60px;
+	position: absolute;
+	top:0;
+	left: 0;
+	line-height: 53px;
+}
+.title hr{
+	width:102px ;
+	height:2px;
+	background-color:#8e8e8e;
+	margin-top: 8px;
+}
+/*内容与风景*/
+.about .content{
+	width:1200px ;
+	margin-left: 328px;
+	margin-top: 80px;
+	position: relative;
+}
+.about .content .content-left{
+	float: left;
+	width: 598px;
+	height: 314px;
+	background-color: #FFFFFF;
+	position: relative;
+	z-index: 10;
+	box-shadow: 10px 3px 10px 1px black;
+	margin-left: 30px;
+}
+.about .content .content-left .left-center{
+	width: 490px;
+	height: 240px;
+	margin: 28px 0 0 50px;
+}
+.about .content .content-left .left-center .left-centertitle{
+	font-size: 18px;
+	margin-bottom: 18px;
+}
+.about .content .content-left .left-center .left-centerbody{
+	font-size: 14px;
+	text-indent: 2em;
+	line-height: 26px;
+	text-align: justify;
+}
+.about .content .content-left .left-center span{
+	display: block;
+	background-color: #99cc33;
+	font-size: 13px;
+	line-height: 22px;
+	width: 72px;
+	text-align:center;
+	float: right;
+}
+.about .content .content-right{
+	border:4px solid #949191 ;
+	float:right;
+	height: 347px;
+	width: 508px;
+	margin-top: 16px;
+	position: relative;
+	margin-right: -30px;
+}
+.about .content .content-right img{
+	position: absolute;
+	top: -30px;
+	left: -100px;
+	z-index: 9;
+}
+/*产品设计*/
+/*标题*/
+.biggest .container2{
+	width: 1200px;
+	margin:0 auto 30px;	
+}
+.biggest .container2 .title2{
+	width: 136px;
+}
+/*内容*/
+/*.product{
+	overflow: hidden;
+}*/
+.por-list{
+	/*border: 1px solid black;*/
+	/*position: relative;*/
+	width: 1200px;
+	margin: 0 auto;
+	
+}
+.por-list .clearfix{
+    margin-top: 42px;
+    width: 1236px;
+    margin-left: -38px;
+}
+.por-list li{
+	list-style: none;
+	float: left;
+	margin-left:38px ;
+	margin-top: 30px;
+}
+ .por-list li p{
+	text-align: center;
+}
+ .por-list li a{
+	text-decoration: none;
+	color: #000000;
+}
+.por-list li:hover img{
+	outline:2px #99CC33 solid ;
+}
+ .por-list li:hover p a{
+	color: #99CC33;
+}
+ .por-list .lookmore{
+	display:block;
+	color: black;
+	background-color: #99CC33;
+	height: 24px;
+	width: 70px;
+	margin: 0 auto;
+	text-align: center;
+	text-decoration: none;
+	line-height: 24px;
+}
+/*新闻中心*/
+/*标题*/
+.news .container
+	width: 1200px;
+	margin:0 auto 30px;	
+}
+.news .container .title{
+	width: 174px;
+}
+.news .title h2{
+	margin-top: 44px;
+}
+
+/*内容*/
+/*背景图*/
+.news{
+	background:url(../img/xwbj.png);
+	position: relative;
+	left: 50%;
+	width: 1920px;
+	margin-left: -960px;
+	overflow: hidden;
+	margin-top: 68px;
+	height: 820px;
+}
+/*标题*/
+.news .title{
+	margin-bottom: 74px;
+}
+.news .left{
+	width: 468px;
+	height: 628px;
+	margin-left:356px;
+	background-color: white;
+	float: left;
+}
+.news .left img{
+	margin-top: 20px;
+}
+.news .left h3{
+	font-size: 18px;
+	margin-left: 38px;
+}
+.news .left p{
+	font-size: 14px;
+	line-height: 24px;
+	text-indent: 2em;
+	text-align: justify;
+	margin:0 38px 38px 38px;
+}
+.news .left h3{
+	display: inline-block;
+	width: 168px;
+}
+.news .left .a{
+	text-decoration: none;
+	color: black;
+}
+.news .left .more{
+	margin-left: 38px;
+}
+.news .left em{
+	display: inline-block;
+	margin-left: 128px;
+}
+	
+.news .right{
+	width: 700px;
+	height: 628px;
+	float:right;
+	margin-right: 356px;
+}
+.news .right img{
+	float: left;	
+	margin-right: 32px;
+}
+.news .right li{
+	margin-bottom: 16px;
+	background-color: white;
+	padding: 20px 0 1px 0;
+}
+.news .right p{
+	margin: 7px 0;
+}
+.news .right h3{
+	display: inline-block;
+	width: 256px;
+	margin: 0 160px 0 0;
+}
+.news .right .more{
+	margin-left: 620px;
+}
+/*联系我们*/
+/*背景图*/
+/*.callabout{
+	overflow: hidden;
+}*/
+.contact{
+	background:url(../img/lianxibeijing.png) no-repeat;
+	height: 536px;
+	width: 1920px;
+	margin: 0 auto;
+}
+/*标题*/
+.contact .container{
+	height: 122px;
+	background-color: white;
+	margin: 0 auto;
+}
+.contact .title{
+	margin-top: 72px;
+	width: 182px;
+	margin-left: 560px;
+	margin-bottom: 50px;
+}
+.contact .title h2{
+	margin-top: 72px;
+}
+	
+/*内容*/
+.contact .container img{
+	float: right;
+	margin:116px 702px 0 0 ;
+}
+.contact ul{
+	float: left;
+	margin-left: 120px;
+	margin-top: 102px;
+	color: white;
+}
+.contact ul li{
+	line-height: 36px;
+	
+}

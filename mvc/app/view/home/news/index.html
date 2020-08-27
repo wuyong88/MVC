@@ -1,0 +1,65 @@
+
+		<link rel="stylesheet" type="text/css" href="resources/home/css/news.css"/>
+		
+		<!--主体部分-->
+	    	<div class="newss">
+	    	    <div class="container clearfix">
+	    	    	<div class="title">
+	    	    	       <span>当前位置:</span>
+	    	    	       <ul>
+	    	    	       	<li><a href="index.php?c=index&a=index">首页&gt;</a></li>
+	    	    	       	<li><a href="index.php?c=news&a=index">新闻中心&gt;</a></li>
+	    	    	       	<li><a href="index.php?c=news&a=index" class="li1">公司新闻</a></li>
+	    	    	       </ul>
+	    	        </div>
+	    		    <div class="left">
+	    		        <ul>
+	    		        	<h2>
+	    		        		<font>新闻中心</font><br/>
+	    			    	    <span>NEWS CENTER</span>
+	    		        	</h2>
+	                       <?php   foreach($news_cate as $v){?>
+	    		        	<li <?php if($cate_id==$v['id']){?> 
+	    		        		class="lione"
+	    		        		<?php }?>>
+	    		        		<a href="index.php?c=news&a=index&cate_id=<?=$v['id']?>"><?=$v['name']?></a>
+	    		        	</li>
+                                      <?php }?>
+	    		        	
+	    		        </ul>
+	    	        </div>
+	    	        <div class="right">
+	    	        	<div class="title1">
+	    	        		<h3>公司新闻</h3>
+	    	        	</div>
+	    	        	<div class="img">
+	    
+
+                          <?php   foreach($news_data as $v){?>
+	   
+                              <div class="news1 clearfix">
+	    	        			<a href="index.php?c=news&a=detail"><img style="width: 264px;height: 198px" src="<?=$v['img']?>"/></a>
+	    	        			<h3><a href="index.php?c=news&a=detail"><?=$v['title']?></a></h3>
+	    	        			<em>2020-6-9</em>
+	    	        			<p><?=$v['content']?></p>
+	    	        			<a href="index.php?c=news&a=detail" class="lookmore">查看更多&gt;</a>
+	    		            </div>
+	    		           <?php }?>
+	    	        	<div class="page">
+	                        <ul>
+			    	           <?= $page_str?>
+			    	        </ul>
+	    	            </div>
+	    	        </div>
+	    	    </div>
+	       </div>
+		<!--这是尾部-->
+		<div class="foot">
+			<p>Copyright&copy;2008-2017 常州乐农生物科技有限公司版权所有</p>
+		</div>
+		
+	</body>
+</html>
+<!--pagination分页-->
+<!--arrow箭头-->
+<!--container容量-->

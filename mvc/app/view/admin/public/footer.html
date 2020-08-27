@@ -1,0 +1,174 @@
+   <footer class="main-footer">
+        <div class="container-fluid">
+          <div class="row">
+            
+             <p> &copy; 2020 CMS</p>
+ 
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!-- JavaScript files-->
+    <script src="resources/admin/vendor/jquery/jquery.min.js"></script>
+    <script src="resources/admin/vendor/popper.js/umd/popper.min.js"> </script>
+    <script src="resources/admin/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="resources/admin/js/grasp_mobile_progress_circle-1.0.0.min.js"></script>
+    <script src="resources/admin/resources/admin/vendor/jquery.cookie/jquery.cookie.js"> </script>
+    <script src="resources/admin/vendor/chart.js/Chart.min.js"></script>
+    <script src="resources/admin/vendor/jquery-validation/jquery.validate.min.js"></script>
+    <script src="resources/admin/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+    <!-- Main File-->
+    <script src="resources/admin/js/front.js"></script>
+  </body>
+</html>
+<script type="text/javascript">
+   var ue = UE.getEditor('editor');
+  // 点击删除按钮
+  $('.btn-danger').click(function(){
+    window.location.href='index.php?m=1&c=<?=C?>&a=del&id='+$(this).data('id')
+  })
+
+// 获取图片信息
+function getUrl(file){
+  var url=null;
+  if (window.createObjectURL !== undefined) {
+    url=window.createObjectURL(file)
+  }else if (window.URL !== undefined) {
+    url=window.URL.createObjectURL(file)
+  }else if (window.webkitURL !== undefined) {
+    url=window.webkitURL.createObjectURL(file)
+  }
+  return url;
+}
+
+// 添加图片
+$('[type="file"]').change(function(){
+  //当含有upload这个id属性的标签发生改变事件的时候
+  var src=getUrl($(this)[0].files[0]);
+  //给含有upload这个id属性的标签里添加下面的标签
+  $('.uploadss').append('<span style="position: relative; margin-right: 8px"><img src="'+src+'" class="img-thumbnail" style="max-width: 100px"><span class="glyphicon glyphicon-remove" style="pqosition: absolute; top: -4px; right: -4px; cursor: pointer;"></span></span>');
+})
+
+// 修改图片
+$('[type="file"]').change(function(){
+  $('.uploadss span').remove()
+  //当含有upload这个id属性的标签发生改变事件的时候
+  var src=getUrl($(this)[0].files[0]);
+  //给含有upload这个id属性的标签里添加下面的标签
+  $('.uploadss').append('<span style="position: relative; margin-right: 8px"><img src="'+src+'" class="img-thumbnail" style="max-width: 100px"><span class="glyphicon glyphicon-remove" style="pqosition: absolute; top: -4px; right: -4px; cursor: pointer;"></span></span>');
+})
+
+
+// 正则表达式
+
+var data = {
+  nickname : {
+    reg:/^\w{5,12}$/,
+    text:'请输入数字字母下划线5-12位合法昵称'
+  },
+
+  name : {
+    reg:/^[a-zA-Z]\w{4,12}$/,
+    text:'请输入数字字母下划线5-12位,必须字母开头'
+  },
+
+  pwd : {
+    reg:/^[\w*?+.]{5,12}$/,
+    text:'请输入数字字母下划线5-12位,必须字母开头'
+  },
+
+tel : {
+    reg: /^1[356789]\d{9}$/,
+    text:'请输入正确电话号码'
+  },
+  
+email : {
+    reg: /^\w+@[0-9a-zA-Z]+\.[a-z]{2,8}$/,
+    text:'请输入正确邮箱'
+  }
+  
+
+  // 
+
+}
+
+function checkText(name){
+  var str = $('[name="'+name+'"]').val()
+  var reg = data[name].reg
+  if(reg.test(str)){
+    $('#'+name+'-text').css('color','green').text("正确")
+    return true
+  }else{
+    $('#'+name+'-text').css('color','red').text(data[name].text)
+    return false
+  }
+}
+// 昵称
+$('[name="nickname"]').blur(function(){
+  checkText('nickname')
+        // 获取当前输入框内容
+      // var str = $(this).val()
+      // // 正则表达式
+      // var reg = /^\w{5,12}$/
+      // // 判断输入框的内容是否满足这个正则表达式
+      // if(reg.test(str)){
+      //   $('#nickname-text').css('color','green').text("正确")
+      // }else{
+      //   $('#nickname-text').css('color','red').text("请输入数字字母下划线5-12位合法昵称")
+      // }
+    })
+// 账号
+$('[name="name"]').blur(function(){
+       checkText('name')
+
+    })
+// 密码dd
+$('[name="pwd"]').blur(function(){
+       checkText('pwd')
+
+
+    })
+// 电话
+$('[name="tel"]').blur(function(){
+       checkText('tel')
+
+    })
+// 邮箱
+$('[name="email"]').blur(function(){
+       checkText('email')
+
+    })
+
+// 确认密码
+
+var confirm_status = false
+
+$('[name="confirm-pwd"]').blur(function(){
+  var str1 = $(this).val()
+  var str2 = $('[name="pwd"]').val()
+  if(str1==str2){
+     $('#confirm-pwd-text').css('color','green').text("正确")
+     confirm_status = true
+      }else{
+        $('#confirm-pwd-text').css('color','red').text("两次密码不一致")
+      confirm_status = false
+  }
+})
+ 
+//提交按钮表单提交
+// $('[type="submit"]').click(function(){
+//    // $('[name="confirm-pwd"]').trigger('blur',confirm_status)
+//    if(!checkText('nickname') ||
+//     !checckText('name') ||
+//    !checkText('pwd') ||
+//    !checkText('tel') ||
+//    !checkText('email') ||
+//    !$('[name="confirm-pwd"]').trigger('blur',confirm_status)
+//    ){
+//     alert('完善')
+//     return false
+//   }
+// }) 
+
+</script>

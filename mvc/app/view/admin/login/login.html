@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CMS内容管理系统</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="resources/admin/vendor/bootstrap/css/bootstrap.min.css">
+    <!-- Font Awesome CSS-->
+    <link rel="stylesheet" href="resources/admin/vendor/font-awesome/css/font-awesome.min.css">
+    <!-- Fontastic Custom icon font-->
+    <link rel="stylesheet" href="resources/admin/css/fontastic.css">
+    <!-- Google fonts - Roboto -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+    <!-- jQuery Circle-->
+    <link rel="stylesheet" href="resources/admin/css/grasp_mobile_progress_circle-1.0.0.min.css">
+    <!-- Custom Scrollbar-->
+    <link rel="stylesheet" href="resources/admin/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="resources/admin/css/style.default.css" id="theme-stylesheet">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="resources/admin/css/custom.css">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="resources/admin/img/favicon.ico">
+    <!-- Tweaks for older IEs--><!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+  </head>
+  <body>
+    <div class="page login-page">
+      <div class="container">
+        <div class="form-outer text-center d-flex align-items-center">
+          <div class="form-inner" style="margin: 0 auto">
+            <div class="logo text-uppercase"><!-- <span>Bootstrap</span> --><strong class="text-primary">CMS内容管理系统</strong></div>
+           
+            <form action="" method="post" class="text-left form-validate">
+              <div class="form-group-material">
+                <input value="<?php echo isset($_COOKIE['name']) ?$_COOKIE['name']:'';?>" id="login-username" type="text" name="name" required data-msg="Please enter your username" class="input-material">
+                <label for="login-username" class="label-material">账号</label>
+              </div>
+              <div class="form-group-material">
+                <input id="login-password" type="password" name="pwd" required data-msg="Please enter your password" class="input-material"
+                value="<?php if(isset($_COOKIE['pwd'])){echo $_COOKIE['pwd'];}?>"
+                />
+                <label for="login-password" class="label-material">密码</label>
+              </div>
+              <div class="form-group-material">
+                <input id="login-code" type="text" name="code" required data-msg="Please enter check code" class="input-material" style="width: 50%">
+                <label for="login-code" class="label-material">验证码</label>
+                <img class="code" src="index.php?m=1&c=login&a=code" style="width: 44%; height: 45px; border: 1px solid #000; float: right;">
+                <div >
+                  
+                </div>
+              </div>
+
+              <div class="form-group-material" >
+                <input type="checkbox" class="login-field" placeholder="password" id="login-pass" name="check" value='1'<?php  if(isset($_COOKIE['pwd'])) {
+                echo "checked"; }?>>
+        <label class="login-field-icon fui-lock" for="login-pass">记住密码</label>    
+              </div>
+
+              <div class="form-group text-center"><a id="login" href="JavaScript:void(0)" class="btn btn-primary">登录</a>
+                <!-- This should be submit button but I replaced it with <a> for demo purposes-->
+              </div>
+            </form><a href="#" class="forgot-pass">忘记密码?</a><!-- <small>Do not have an account? </small><a href="register.html" class="signup">Signup</a> -->
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    <!-- JavaScript files-->
+    <script src="resources/admin/vendor/jquery/jquery.min.js"></script>
+    <script src="resources/admin/vendor/popper.js/umd/popper.min.js"> </script>
+    <script src="resources/admin/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="resources/admin/js/grasp_mobile_progress_circle-1.0.0.min.js"></script>
+    <script src="resources/admin/vendor/jquery.cookie/jquery.cookie.js"> </script>
+    <script src="resources/admin/vendor/chart.js/Chart.min.js"></script>
+    <script src="resources/admin/vendor/jquery-validation/jquery.validate.min.js"></script>
+    <script src="resources/admin/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+    <!-- Main File-->
+    <script src="resources/admin/js/front.js"></script>
+  </body>
+</html>
+<script type="text/javascript">
+//ajax 异步的XML与HTTP请求 无刷新请求
+//做什么：页面不刷新更新页面内容
+//查找问题：控制台看问题
+//怎么查看ajax请求：F12 网络 XHR
+  //请求状态是不是200 OK
+  //请求地址是不是自己的地址
+  //请求方式是不是 get post
+  //响应结果是不是预期的结果（是js或php哪个的问题）
+
+//静态资源的缓存 不要缓存在静态资源URL后面追加参数
+//缓存的原理判断请求地址是否一致
+
+//如何获取打钩的复选框的结果 $(选择器：checked)
+//如何获取选中的单选按钮 $(选择器：checked)
+//如何获取选中的下拉框  $(选择器：checked)
+
+
+
+  //找到id=login 的标签加点击事件
+  $(function(){
+     // $('#login').click(function(){
+     //  //找到from标签，加submit事件
+     //   $('form').submit()
+     // })
+     
+  //点击图片更换验证码
+     $('.code').click(function(){//防止缓存 让连接地址变化 加Math.random()
+      var src='index.php?m=1&c=login&a=code&'+Math.random()
+      $(this).attr('src',src)
+     })
+
+ $('#login').click(function(){
+  //异步登录 ajax
+  //怎么查看ajax请求
+  //F12选择network网络，点击XHR刷新页面
+  var par_name =$('#login-username').val();
+  var par_pwd  =$('#login-password').val();
+  var par_code =$('#login-code').val();
+
+  //选择器：checked 找到被打钩的那一个html
+  // var par_check=$('#login-pass:checked').val();
+  // if (par_check !=1) {
+  //    par_check=0
+  // }
+
+  $.ajax({
+  url:'index.php?m=1&c=login&a=login',//请求地址
+  type:'post',       //请求方法
+  data:{name:par_name,pwd:par_pwd,code:par_code},  //请求携带的数据
+  dataType:'json',   //数据格式
+  success:function(data){ //成功的回调函数
+   //function的data参数是后台返回的结果
+   //json的对象
+   //data.data data.msg data.status
+   if (data.status!=200) {
+       alert(data.msg)
+   }else {
+    alert(data.data)
+    window.location.href=data.data
+   }
+
+ }
+
+})
+
+})
+
+})
+
+
+
+
+
+</script>

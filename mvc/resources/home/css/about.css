@@ -1,0 +1,109 @@
+.aboutus{
+	width: 1200px;
+	margin: 0 auto 58px;
+}
+.aboutus .title{
+	margin-top: 58px;
+	font-size: 14px;
+	height: 0px;
+	width: 1200px;
+	text-align: right;
+	border-bottom: 1px dashed #d6d6d6;
+	padding-bottom: 24px;
+}
+.aboutus .title ul{
+	float: right;
+}
+.aboutus .title li{
+	float: left;
+}
+.aboutus .title a,.aboutus .title span{
+	color: #d6d6d6;
+}
+.aboutus .title .li1{
+	color:#99cc33 ;
+}
+.aboutus .title span{
+	position: relative;
+}
+.aboutus .title span:before{
+	content: '';
+	display: inline-block;
+	position: absolute;
+	background: url(../img/hoom.png) no-repeat;
+	width: 22px;
+	height: 18px;
+	left: -24px;
+	top:2px
+}
+.aboutus .left{
+	float: left;
+	border: 3px solid #d6d6d6;
+	width: 252px;
+	height: 302px;
+	text-align: center;
+	margin-top: 120px;
+	position: relative;
+}
+.aboutus .left h2{
+	margin: 24px 0;
+	color: #d6d6d6;
+	font-size: 14px;
+}
+.aboutus .left h2 font{
+	font-size: 24px;
+	color: #000000;
+}
+.aboutus .left h2 span:before{
+	content: '';
+	display: block;
+	position: absolute;
+	height: 3px;
+	width: 32px;
+	background-color: #d6d6d6;
+	left: 44px;
+	top: 40px;
+}
+.aboutus .left h2 span:after{
+	content: '';
+	display: block;
+	position: absolute;
+	height: 3px;
+	width: 32px;
+	background-color: #d6d6d6;
+	right: 44px;
+	top: 40px;
+}
+.aboutus .left a{
+	display: block;
+	font-size: 18px;
+	line-height: 44px;
+	margin-bottom: 20px;
+}
+.aboutus .left .lione{
+	background-color: #99cc33;
+}
+.aboutus .left a:hover{
+	background-color: #99cc33;
+}
+.aboutus .right{
+	float: left;
+	width: 814px;
+	margin-left: 70px;
+}
+.aboutus .right h3{
+	text-align: center;
+	font-size: 18px;
+	margin: 62px 0 42px;
+}
+.aboutus .right img{
+	margin-left: 70px;
+	margin-bottom: 48px;
+}
+.aboutus .right p{
+	font-size: 14px;
+	line-height: 24px;
+	text-align:justify;
+	text-indent: 2em;
+	margin: 0 0 36px 0;
+}

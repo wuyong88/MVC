@@ -1,0 +1,167 @@
+      <!-- Breadcrumb-->
+     
+      <section class="forms">
+        <div class="container-fluid">
+          <!-- Page Header-->
+          <header> 
+            <h1 class="h3 display" style="font-size: 20px">用户修改修改          
+            </h1>
+          </header>
+          <div class="row">
+             
+            <div class="col-lg-12">
+              <div class="card">
+                <div class="card-body">
+                  <form class="form-horizontal" action="" method="post" enctype="multipart/form-data">
+
+                    <div class="form-group row">
+                      <label class="col-sm-2 form-control-label">昵称</label>
+                      <div class="col-sm-10">
+                        <input type="text" name="nickname" class="form-control" value="<?php echo $data[0]['nickname']; ?>">
+                        <span id="nickname-text" class="text-small text-gray help-block-nine">
+                          请输入数字字母下划线5-12位
+                          </span>
+                      </div>
+                    </div>
+                   <div class="line"></div>
+                    <div class="form-group row">
+                      <label class="col-sm-2 form-control-label">账号</label>
+                      <div class="col-sm-10">
+                        <input type="text" name="name" class="form-control"  value="<?php echo $data[0]['username']; ?>">
+                        <span id="name-text" class="text-small text-gray help-block-nine">
+                          请输入数字字母下划线5-12位
+                          </span>
+                      </div>
+                    </div>
+
+                    <div class="line"></div>
+                     <div class="form-group row">
+                      <label class="col-sm-2 form-control-label">密码</label>
+                      <div class="col-sm-10">
+                        <input type="text" name="pwd" class="form-control" value="<?php echo $data[0]['password']; ?>">
+                        <span id="pwd-text" class="text-small text-gray help-block-nine">
+                          请输入数字字母下划线5-12位,并且至少有一个字符
+                          </span>
+                      </div>
+                    </div>
+                        <div class="line"></div>
+
+                         <div class="form-group row">
+                      <label class="col-sm-2 form-control-label">确认密码</label>
+                      <div class="col-sm-10">
+                        <input type="text" name="confirm-pwd" class="form-control" >
+                        <span id="confirm-pwd-text" class="text-small text-gray help-block-nine">
+                          请输入数字字母下划线5-12位,并且至少有一个字符
+                          </span>
+                      </div>
+                    </div>
+                        <div class="line"></div>
+
+                    <div class="form-group row">
+                      <label class="col-sm-2 form-control-label">角色</label>
+                      <div class="col-sm-10 mb-3" >
+                           <select name="cate_id"  class="form-control" style="display: inline-block; max-width: 18%; margin:0px 6px 6px 0px">
+                          <option>角色</option>
+                        <?php  foreach ($admin as $v) { ?>
+                        <option 
+                        <?php 
+                        if($data[0]['role_id']==$v['id']){ 
+                           echo 'selected="true"' ;?> 
+                          <?php } ?>
+                          value="<?php echo $v['id']; ?>"
+                          >
+                          <?php echo $v['name'];  ?></option>
+                          <?php } ?>
+                        </select>
+ 
+        
+ 
+                      </div>
+                    </div>
+                        
+
+                    <div class="line"></div>
+
+                    <div class="form-group row">
+                      <label class="col-sm-2 form-control-label">电话</label>
+                      <div class="col-sm-10">
+                        <input type="text" name="tel" class="form-control" value="<?php echo $data[0]['phone']; ?>">
+                        <span id="tel-text" class="text-small text-gray help-block-nine">
+                          请输入正确电话号码
+                          </span>
+                      </div>
+                    </div>
+                    <div class="line"></div>
+
+                    <div class="form-group row">
+                      <label class="col-sm-2 form-control-label">邮箱</label>
+                      <div class="col-sm-10">
+                        <input type="text" name="email" class="form-control" value="<?php echo $data[0]['email']; ?>">
+                           <span id="email-text" class="text-small text-gray help-block-nine">
+                          请输入数正确邮箱
+                          </span>
+                      </div>
+                    </div>
+                    <div class="line"></div>
+
+                    <div class="form-group row">
+                      <label class="col-sm-2 form-control-label">性别</label>
+                      <div class="col-sm-10 mb-3" >
+                        <select name="sex" class="form-control" style="display: inline-block; max-width: 18%;">
+                          <option <?php
+                           if($data[0]['sex'] == 0){ 
+                           echo 'selected="true"' ;
+                          ?> 
+                       <?php } ?>
+                          value="1">男</option>
+                          <option <?php
+                           if($data[0]['sex'] == 1){ 
+                           echo 'selected="true"' ;
+                          ?> 
+                       <?php } ?>
+                          value="1">女</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="line"></div>
+
+                    <div class="form-group row">
+                      <label class="col-sm-2 form-control-label">添加图片</label>
+                      <div class="col-sm-10 mb-3 uploadss" >
+                        <div style="position: relative; height: 24px">
+                      
+                          <input type="file" name="file"  img_src/>
+                          <input type="radio" name="water" value="0" />无水印
+                          <input type="radio" name="water" value="1" />文字水印
+                          <input type="radio" name="water" value="2"/>图片水印
+                           
+                        </div>
+                        <div class="line"></div>
+
+                      </div>
+                    </div>
+                    <div class="line"></div>
+                       <?php  if($data[0]['img_src']){ ?>
+                        <span style="position: relative; margin-right: 8px">
+                          <img src="<?php echo $admin[0]['img_srcmg']; ?>" class="img-thumbnail" style="max-width: 100px"><span class="glyphicon glyphicon-remove" style="position: absolute; top: -4px; right: -4px;cursor: pointer;"></span>
+                        </span>
+
+                        <?php }?>
+                
+   
+                    <div class="form-group row">
+                      <div class="col-sm-4 offset-sm-2">
+                        <button type="reset" class="btn btn-secondary">重置</button>
+                        <button type="submit" class="btn btn-primary">提交</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+  
+

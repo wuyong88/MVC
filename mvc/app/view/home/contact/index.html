@@ -1,0 +1,86 @@
+
+		<link rel="stylesheet" type="text/css" href="resources/home/css/contact.css"/>
+		
+		<!--主体部分-->
+	    	<div class="contactus">
+	    	    <div class="container clearfix">
+	    	    	<div class="title">
+	    	    	       <span>当前位置:</span>
+	    	    	       <ul>
+	    	    	       	<li><a href="index.php?c=index&a=index">首页&gt;</a></li>
+	    	    	       	<li><a href="index.php?c=contact&a=index" class="li1">联系我们</a></li>
+	    	    	       </ul>
+	    	        </div>
+	    		    <div class="left">
+	    		    	
+	    		        <ul>
+	    		        	<h2>
+	    		        		<font>联系我们</font><br/>
+	    			    	    <span>CONTACT US</span>
+	    		        	</h2> 
+	    		        	 <?php  foreach($touch_cates as $v){?> 
+	    		        	<li <?php if($cate_id==$v['id']){?> class="lione"<?php }?>>
+	    		        		<a href="index.php?c=contact&a=index&cate_id=<?=$v['id']?>""><?=$v['name']?></a>
+	    		        	</li>
+	    		         <?php }?>
+	    		        </ul>
+	    		       
+	    	        </div>
+	    	        <div class="right clearfix">
+	    	        	<h3>公司地图</h3>
+	    	        	<div class="maps">
+	    	        		  <!--百度地图容器-->
+                              <div style="width:800px;height:302px;border:#ccc solid 1px;" id="dituContent"></div>
+	    	        	</div>
+	    	        	<div class="contactuss">
+	    	        		<?php  foreach($touch as $v){?> 
+	    	        		<ul>
+	    	        			<li>公司名称：<?=$v['gsname']?></li>
+	    	        			<li>邮政编码：<?=$v['zip']?></li>
+	    	        			<li>公司电话：<?=$v['tel']?></li>
+	    	        			<li>联 系 人：<?=$v['user']?></li>
+	    	        			<li>手机号码：<?=$v['phone']?></li>
+	    	        			<li>电子邮箱：<?=$v['massage']?></li>
+	    	        			<li>公司网址：<?=$v['mailboxes']?></li>
+	    	        			<li>公司地址：<?=$v['gssite']?></li>
+	    	        		</ul>
+	    	        		<?php }?>
+	    	        		<form action="" method="post" enctype="multipart/form-data">
+	    	        			<label>
+	    	        				<span >姓&nbsp;&nbsp;&nbsp;名：</span>
+	    	        				<input type="text" name="username" />
+	    	        			</label>
+	    	        			<label>
+	    	        				<span >电&nbsp;&nbsp;&nbsp;话：</span>
+	    	        				<input type="text" name="telephone" />
+	    	        			</label>
+	    	        			<label>
+	    	        				<span >邮&nbsp;&nbsp;&nbsp;箱：</span>
+	    	        				<input type="text" name="mailboxes" />
+	    	        			</label>
+	    	        			<label class="talk">
+	    	        				<span >留&nbsp;&nbsp;&nbsp;言：</span>
+	    	        				<textarea name="massage"></textarea>
+	    	        			</label>
+	    	        			<label class="Ver">
+	    	        				<span >验证码：</span>
+	    	        				<input type="text" name="Verification"/ class="Verification">
+	    	        			</label >
+	    	        			<img src="resources/home/img/ver.png"/>
+	    	        			<input type="submit" value="提交" class="submit"/>
+	    	        		</form>
+	    	        	</div>
+	    	        </div>
+	    	    </div>
+	       </div>
+		<!--这是尾部-->
+		<div class="foot">
+			<p>Copyright&copy;2008-2017 常州乐农生物科技有限公司版权所有</p>
+		</div>
+	</body>
+	<script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+	<script type="text/javascript" src="resources/home/js/map.js" ></script>
+</html>
+<!--pagination分页-->
+<!--arrow箭头-->
+<!--container容量-->

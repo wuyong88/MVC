@@ -1,0 +1,45 @@
+<link rel="stylesheet" type="text/css" href="resources/home/css/about.css"/>
+		<!--about主体部分-->
+	    	<div class="aboutus">
+	    	    <div class="container clearfix">
+	    	    	<div class="title">
+	    	    	       <span>当前位置:</span>
+	    	    	       <ul>
+	    	    	       	<li><a href="index.php?c=index&a=index">首页&gt;</a></li>
+	    	    	       	<li><a href="index.php?c=about&a=index">关于我们&gt;</a></li>
+	    	    	       	<li><a href="index.php?c=about&a=index" class="li1">公司简介</a></li>
+	    	    	       </ul>
+	    	        </div>
+	    		    <div class="left">
+	    		        <ul>
+	    		        	<h2>
+	    		        		<font>关于我们</font><br/>
+	    			    	    <span>ABOUT US</span>
+	    		        	</h2>
+	    		      <?php foreach($about_cate as $v){ ?>
+	    		        	<li<?php if($cat_id==$v['id']){?> class="lione"<?php }?>><a href="index.php?c=about&a=index&cat_id=<?=$v['id']?>"><?=$v['name']?></a></li>
+	    		      <?php }?>
+	    		        	
+	    		        </ul>
+	    	        </div>
+
+	    	        <div class="right"> 
+	    	        	<?php   foreach($about_data as $v){?>
+	    	        	<h3>乐农生物科技有限公司</h3>
+	    	        	<img src="resources/home/img/about_us.png"/>
+	    	        	<p><?=$v['content']?></p>
+	    	        	<?php }?>
+
+	    	        </div>
+	    	    </div>
+	       </div>
+		<!--这是尾部-->
+		<div class="foot">
+			<p>Copyright&copy;2008-2017 常州乐农生物科技有限公司版权所有</p>
+		</div>
+		
+	</body>
+</html>
+<!--pagination分页-->
+<!--arrow箭头-->
+<!--container容量-->
